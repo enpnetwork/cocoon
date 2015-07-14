@@ -14,7 +14,7 @@
     return '_' + id + '_$1';
   }
 
-  $(document).on('click', '.add_fields', function(e) {
+  $(document).on('click', '.add_fields_via_cocoon', function(e) {
     e.preventDefault();
     var $this                 = $(this),
         assoc                 = $this.data('association'),
@@ -76,7 +76,7 @@
     });
   });
 
-  $(document).on('click', '.remove_fields.dynamic, .remove_fields.existing', function(e) {
+  $(document).on('click', '.remove_fields_via_cocoon.dynamic, .remove_fields_via_cocoon.existing', function(e) {
     var $this = $(this),
         wrapper_class = $this.data('wrapper-class') || 'nested-fields',
         node_to_delete = $this.closest('.' + wrapper_class),
@@ -99,7 +99,7 @@
     }, timeout);
   });
 
-  $('.remove_fields.existing.destroyed').each(function(i, obj) {
+  $('.remove_fields_via_cocoon.existing.destroyed').each(function(i, obj) {
     var $this = $(this),
         wrapper_class = $this.data('wrapper-class') || 'nested-fields';
 
